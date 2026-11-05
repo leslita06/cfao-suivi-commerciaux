@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#00438D">
+<title>Suivi des commerciaux, CFAO Mobility Côte d'Ivoire (démonstration)</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="fictif">Données fictives de démonstration. Aucun chiffre de CFAO Mobility n'a été utilisé.</div>
+<header class="top">
+  <div class="wrap top-in">
+    <img src="assets/logo-cfao.png" alt="CFAO Mobility" class="logo">
+    <div class="titre">
+      <h1>Suivi des commerciaux</h1>
+      <p>Rapports d'activité et ventes, 12 commerciaux, 5 sites, 6 marques</p>
+    </div>
+    <div class="pret"><span class="pastille-ok"></span><span>À jour jeudi 5 novembre, 8 h</span></div>
+  </div>
+</header>
+
+<nav class="filtres" aria-label="Filtres">
+  <div class="wrap filtres-in">
+    <div class="ligne-f">
+      <div class="seg" id="f-periode" role="tablist"></div>
+      <select id="f-semaine" aria-label="Semaine"></select>
+      <select id="f-mois" aria-label="Mois"></select>
+      <button class="raz" id="raz" type="button">Tout effacer</button>
+    </div>
+    <div class="ligne-f defile">
+      <span class="lib">Marque</span><div class="chips" id="f-marque"></div>
+    </div>
+    <div class="ligne-f grille-sel">
+      <label><span class="lib">Site</span><select id="f-site"></select></label>
+      <label><span class="lib">Canal</span><select id="f-canal"></select></label>
+      <label><span class="lib">Commercial</span><select id="f-com"></select></label>
+    </div>
+    <p class="lecture" id="lecture"></p>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="kpis" id="kpis"></section>
+
+  <div class="grille-2 haut">
+    <section class="bloc rapports-bloc">
+      <div class="bloc-tete">
+        <h2>Rapports de cette semaine</h2>
+        <span class="note" id="rap-note"></span>
+      </div>
+      <div class="rap-resume" id="rap-resume"></div>
+      <div id="rap-liste"></div>
+    </section>
+    <section class="bloc alertes-bloc">
+      <div class="bloc-tete">
+        <h2>Les 3 alertes de la semaine</h2>
+        <span class="note">Écrites par l'Expert</span>
+      </div>
+      <ol class="alertes" id="alertes"></ol>
+    </section>
+  </div>
+
+  <section class="bloc">
+    <div class="bloc-tete">
+      <h2>Classement des commerciaux</h2>
+      <span class="note" id="cl-note">Sur le chiffre d'affaires livré. Toucher un nom pour filtrer.</span>
+    </div>
+    <div class="tri" id="tri"></div>
+    <div id="classement"></div>
+  </section>
+
+  <div class="grille-2">
+    <section class="bloc">
+      <div class="bloc-tete"><h2>De l'essai à la livraison</h2><span class="note">Sélection en cours</span></div>
+      <div id="entonnoir"></div>
+    </section>
+    <section class="bloc">
+      <div class="bloc-tete"><h2>Par marque</h2><span class="note">Chiffre d'affaires contre objectif</span></div>
+      <div id="marques"></div>
+    </section>
+  </div>
+
+  <div class="grille-2">
+    <section class="bloc">
+      <div class="bloc-tete"><h2>Par canal</h2><span class="note">Part des commandes</span></div>
+      <div id="canaux"></div>
+    </section>
+    <section class="bloc">
+      <div class="bloc-tete"><h2>Par site</h2><span class="note">Chiffre d'affaires contre objectif</span></div>
+      <div id="sites"></div>
+    </section>
+  </div>
+
+  <section class="bloc">
+    <div class="bloc-tete"><h2>Semaine après semaine</h2><span class="note">Chiffre d'affaires livré et objectif, 12 dernières semaines</span></div>
+    <div class="chart-h"><canvas id="c-sem"></canvas></div>
+  </section>
+
+  <section class="bloc avant-apres">
+    <div class="bloc-tete"><h2>Le suivi de l'équipe, avant et avec l'Expert</h2><span class="note">Estimation</span></div>
+    <div class="aa">
+      <div class="aa-col avant">
+        <span class="aa-lib">Aujourd'hui</span>
+        <span class="aa-chiffre">5 h par semaine</span>
+        <ul>
+          <li>Les rapports arrivent par WhatsApp, par mail ou pas du tout</li>
+          <li>Le chef des ventes relance, recopie et additionne</li>
+          <li>Un retard se voit le jour de la revue du mois</li>
+        </ul>
+      </div>
+      <div class="aa-fleche" aria-hidden="true">→</div>
+      <div class="aa-col apres">
+        <span class="aa-lib">Avec l'Expert</span>
+        <span class="aa-chiffre">15 minutes par jour</span>
+        <ul>
+          <li>Chaque matin, la liste de qui n'a pas rendu son rapport</li>
+          <li>Classement, écarts et transformation à jour, sur le téléphone</li>
+          <li>Trois alertes écrites chaque semaine, avec l'action à mener</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc sources">
+    <div class="bloc-tete"><h2>D'où viennent les chiffres</h2></div>
+    <p>Un tableur source à vraies formules : rapports quotidiens, ventes par commercial, marque et canal, objectifs. Les totaux collent au rapport de ventes du lundi. Les objectifs se fixent par marque et par site : ils ne changent pas avec le canal.</p>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap pied-in">
+    <span><strong>Données fictives de démonstration.</strong> Proposé par Yelema, maquette non publiée.</span>
+  </div>
+</footer>
+<script src="assets/chart.umd.min.js"></script>
+<script src="data/donnees.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
